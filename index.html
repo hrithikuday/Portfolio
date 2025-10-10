@@ -576,24 +576,25 @@
     }
 
     .form-btn {
-    background: linear-gradient(to right, #4a90e2, #357abd);
-    border: none;
-    color: #fff;
-    padding: 12px 28px;
-    border-radius: 10px;
-    cursor: pointer;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 600;
-    font-size: 14px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    transition: 0.3s;
+  background: transparent;
+  border: 1px solid #3a3a3c;
+  color: #c9b577;
+  padding: 12px 28px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: 0.3s;
 }
 
 .form-btn:hover:not(:disabled) {
+  background: #2a2a2c;
+  border-color: #c9b577;
   transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(74, 144, 226, 0.4);
 }
 
 .form-btn:disabled {
