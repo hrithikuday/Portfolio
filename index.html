@@ -124,10 +124,6 @@
       transform: rotate(180deg);
     }
 
-    .info_more-btn::before {
-      content: '';
-    }
-
     .sidebar-info_more {
       max-height: 0;
       overflow: hidden;
@@ -437,92 +433,63 @@
       border-radius: 10px;
     }
 
-    .filter-list {
-      display: flex;
-      gap: 15px;
-      list-style: none;
-      margin-bottom: 30px;
-      flex-wrap: wrap;
-    }
-
-    .filter-list button {
-      background: #383838;
-      border: none;
-      color: #a0a0a0;
-      padding: 10px 20px;
-      border-radius: 10px;
-      cursor: pointer;
-      font-family: 'Poppins', sans-serif;
-      transition: 0.3s;
-    }
-
-    .filter-list button.active, .filter-list button:hover {
-      background: #ffdb70;
-      color: #1e1e1f;
-    }
-
-    .project-list {
+    .projects-list {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
       gap: 25px;
       list-style: none;
     }
 
-    .project-item {
+    .project-item a {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+      background: #383838;
       border-radius: 15px;
       overflow: hidden;
-      background: #383838;
       transition: 0.3s;
+      padding: 25px;
     }
 
-    .project-item:hover {
+    .project-item a:hover {
       transform: translateY(-5px);
     }
 
-    .project-img {
-      position: relative;
-      overflow: hidden;
+    .project-content {
+      padding: 0;
     }
 
-    .project-img img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-    }
-
-    .project-item-icon-box {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%) scale(0);
-      background: #ffdb70;
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
+    .project-meta {
       display: flex;
       align-items: center;
-      justify-content: center;
-      transition: 0.3s;
-    }
-
-    .project-item:hover .project-item-icon-box {
-      transform: translate(-50%, -50%) scale(1);
-    }
-
-    .project-item-icon-box ion-icon {
-      font-size: 24px;
-      color: #1e1e1f;
-    }
-
-    .project-title {
-      padding: 15px 20px 5px;
-      font-size: 16px;
+      gap: 10px;
+      margin-bottom: 10px;
+      font-size: 13px;
     }
 
     .project-category {
-      padding: 0 20px 15px;
       color: #ffdb70;
-      font-size: 13px;
+    }
+
+    .dot {
+      width: 4px;
+      height: 4px;
+      background: #a0a0a0;
+      border-radius: 50%;
+    }
+
+    .project-meta time {
+      color: #a0a0a0;
+    }
+
+    .project-item-title {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .project-text {
+      color: #a0a0a0;
+      font-size: 14px;
     }
 
     .mapbox {
@@ -570,106 +537,38 @@
     }
 
     textarea.form-input {
-    width: 100%;
-    min-height: 150px;
-    grid-column: 1 / -1; 
+      width: 100%;
+      min-height: 150px;
+      grid-column: 1 / -1; 
     }
 
     .form-btn {
-  background: transparent;
-  border: 1px solid #3a3a3c;
-  color: #c9b577;
-  padding: 12px 28px;
-  border-radius: 10px;
-  cursor: pointer;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 600;
-  font-size: 14px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  transition: 0.3s;
-  margin-left: auto;
-  box-shadow: 0 0 0 1px #000;
-}
-
-.form-btn:hover:not(:disabled) {
-  background: #2a2a2c;
-  border-color: #c9b577;
-  transform: translateY(-2px);
-}
-
-.form-btn:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-    .blog-posts-list {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-      gap: 25px;
-      list-style: none;
-    }
-
-    .blog-post-item a {
-      text-decoration: none;
-      color: inherit;
-      display: block;
-      background: #383838;
-      border-radius: 15px;
-      overflow: hidden;
-      transition: 0.3s;
-      padding: 25px;
-    }
-
-    .blog-post-item a:hover {
-      transform: translateY(-5px);
-    }
-
-    .blog-banner-box img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-    }
-
-    .blog-content {
-      padding: 0;
-    }
-
-    .blog-meta {
+      background: transparent;
+      border: 1px solid #3a3a3c;
+      color: #c9b577;
+      padding: 12px 28px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      font-size: 14px;
       display: flex;
       align-items: center;
       gap: 10px;
-      margin-bottom: 10px;
-      font-size: 13px;
+      transition: 0.3s;
+      margin-left: auto;
+      box-shadow: 0 0 0 1px #000;
     }
 
-    .blog-category {
-      color: #ffdb70;
+    .form-btn:hover:not(:disabled) {
+      background: #2a2a2c;
+      border-color: #c9b577;
+      transform: translateY(-2px);
     }
 
-    .dot {
-      width: 4px;
-      height: 4px;
-      background: #a0a0a0;
-      border-radius: 50%;
-    }
-
-    .blog-meta time {
-      color: #a0a0a0;
-    }
-
-    .blog-item-title {
-      font-size: 18px;
-      margin-bottom: 10px;
-    }
-
-    .blog-text {
-      color: #a0a0a0;
-      font-size: 14px;
-    }
-
-    .filter-select-box {
-      display: none;
+    .form-btn:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
     }
 
     @media (max-width: 1024px) {
@@ -686,29 +585,6 @@
     @media (max-width: 640px) {
       .input-wrapper {
         grid-template-columns: 1fr;
-      }
-
-      .filter-list {
-        display: none;
-      }
-
-      .filter-select-box {
-        display: block;
-        margin-bottom: 30px;
-      }
-
-      .filter-select {
-        width: 100%;
-        background: #383838;
-        border: none;
-        color: #fff;
-        padding: 15px;
-        border-radius: 10px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        cursor: pointer;
-        font-family: 'Poppins', sans-serif;
       }
     }
   </style>
@@ -812,9 +688,8 @@
           <li class="navbar-item">
             <button class="navbar-link" onclick="showPage('resume')">Resume</button>
           </li>
-
           <li class="navbar-item">
-            <button class="navbar-link" onclick="showPage('creative')">Creative</button>
+            <button class="navbar-link" onclick="showPage('projects')">Projects</button>
           </li>
           <li class="navbar-item">
             <button class="navbar-link" onclick="showPage('contact')">Contact</button>
@@ -829,10 +704,10 @@
 
         <section class="about-text">
           <p>
-            I'm Hrithik Uday, a Python Full Stack Developer in training, passionate about building innovative and efficient digital solutions. I’m skilled in Python, web development, and Telegram bot creation, with a strong interest in crafting creative and functional websites.
+            I'm Hrithik Uday, a Python Full Stack Developer in training, passionate about building innovative and efficient digital solutions. I'm skilled in Python, web development, and Telegram bot creation, with a strong interest in crafting creative and functional websites.
           </p>
           <p>
-           I love turning ideas into reality through clean, intuitive, and user-friendly designs. My goal is to develop technology that’s accessible and easy to use for everyone. I’m always eager to learn, build, and innovate, constantly exploring new ways to improve and grow as a developer.
+           I love turning ideas into reality through clean, intuitive, and user-friendly designs. My goal is to develop technology that's accessible and easy to use for everyone. I'm always eager to learn, build, and innovate, constantly exploring new ways to improve and grow as a developer.
           </p>
         </section>
 
@@ -869,8 +744,6 @@
                 <p class="service-item-text">Modification of applications for Windows and Android.</p>
               </div>
             </li>
-
-
           </ul>
         </section>
 
@@ -913,7 +786,7 @@
             <li class="timeline-item">
               <h4 class="h4 timeline-item-title">TallyPrime with GST</h4>
               <span>2024 — 2025</span>
-              <p class="timeline-text">Completed Completed TallyPrime with GST.</p>
+              <p class="timeline-text">Completed TallyPrime with GST.</p>
             </li>
             <li class="timeline-item">
               <h4 class="h4 timeline-item-title">Learning Python Full Stack</h4>
@@ -957,7 +830,7 @@
               </div>
             </li>
 
-<li class="skills-item">
+            <li class="skills-item">
               <div class="title-wrapper">
                 <h5 class="h5">Python Full Stack development</h5>
                 <data value="50">50%</data>
@@ -970,39 +843,65 @@
         </section>
       </article>
 
-
-      <article class="creative" data-page="creative">
+      <article class="creative" data-page="projects">
         <header>
-          <h2 class="h2 article-title">Creative</h2>
+          <h2 class="h2 article-title">Projects</h2>
         </header>
 
-        <section class="blog-posts">
-          <ul class="blog-posts-list">
-
-            <li class="blog-post-item">
+        <section class="projects">
+          <ul class="projects-list">
+            <li class="project-item">
               <a href="https://app.hrithikuday.me/" target="_blank">
-                <div class="blog-content">
-                  <div class="blog-meta">
-                    <p class="blog-category">Website</p>
+                <div class="project-content">
+                  <div class="project-meta">
+                    <p class="project-category">Website</p>
                     <span class="dot"></span>
                     <time datetime="2024">2024</time>
                   </div>
-                  <h3 class="h3 blog-item-title">Song4u</h3>
-                  <p class="blog-text">My official Song4u website projects and professional work.</p>
+                  <h3 class="h3 project-item-title">Song4u</h3>
+                  <p class="project-text">My official Song4u website projects and professional work.</p>
                 </div>
               </a>
             </li>
 
-            <li class="blog-post-item">
+            <li class="project-item">
               <a href="https://github.com/hrithikuday/hrithikuday" target="_blank">
-                <div class="blog-content">
-                  <div class="blog-meta">
-                    <p class="blog-category">Development</p>
+                <div class="project-content">
+                  <div class="project-meta">
+                    <p class="project-category">Development</p>
                     <span class="dot"></span>
                     <time datetime="2024">2024</time>
                   </div>
-                  <h3 class="h3 blog-item-title">GitHub Repository</h3>
-                  <p class="blog-text">Open source projects, code samples, and development work.</p>
+                  <h3 class="h3 project-item-title">GitHub Repository</h3>
+                  <p class="project-text">Open source projects, code samples, and development work.</p>
+                </div>
+              </a>
+            </li>
+
+            <li class="project-item">
+              <a href="https://incomeexpanceandcustomerbill.tiiny.site/Income-Expance.xlsx" target="_blank">
+                <div class="project-content">
+                  <div class="project-meta">
+                    <p class="project-category">Excel Application</p>
+                    <span class="dot"></span>
+                    <time datetime="2024">2024</time>
+                  </div>
+                  <h3 class="h3 project-item-title">Income Expense Tracker</h3>
+                  <p class="project-text">Comprehensive Excel-based income and expense management system with automated calculations.</p>
+                </div>
+              </a>
+            </li>
+
+            <li class="project-item">
+              <a href="https://incomeexpanceandcustomerbill.tiiny.site/Customer-Bill-New-xeon-hrithik-4.xlsx" target="_blank">
+                <div class="project-content">
+                  <div class="project-meta">
+                    <p class="project-category">Excel Application</p>
+                    <span class="dot"></span>
+                    <time datetime="2024">2024</time>
+                  </div>
+                  <h3 class="h3 project-item-title">Customer Billing System</h3>
+                  <p class="project-text">Professional customer billing and invoice generation system built with Excel macros.</p>
                 </div>
               </a>
             </li>
@@ -1016,18 +915,18 @@
         </header>
 
         <section class="mapbox">
-  <figure>
-    <iframe
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d77618.57791959672!2d75.91757935!3d10.91365615!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba7b18ce2f8645d%3A0x460f5865302bbabc!2sTirur%2C%20Kerala!5e1!3m2!1sen!2sin!4v1759940483669!5m2!1sen!2sin"
-      width="600"
-      height="450"
-      style="border:0;"
-      allowfullscreen=""
-      loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade">
-    </iframe>
-  </figure>
-</section>
+          <figure>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d77618.57791959672!2d75.91757935!3d10.91365615!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba7b18ce2f8645d%3A0x460f5865302bbabc!2sTirur%2C%20Kerala!5e1!3m2!1sen!2sin!4v1759940483669!5m2!1sen!2sin"
+              width="600"
+              height="450"
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </figure>
+        </section>
 
         <section class="contact-form">
           <h3 class="h3 form-title">Contact Form</h3>
@@ -1051,7 +950,6 @@
   </main>
 
   <script>
-    // Smooth page transitions with scroll to top
     function showPage(pageName) {
       const articles = document.querySelectorAll('article');
       const navLinks = document.querySelectorAll('.navbar-link');
@@ -1067,13 +965,12 @@
       navLinks.forEach(link => {
         link.classList.remove('active');
         if (link.textContent.toLowerCase() === pageName || 
-            (link.textContent.toLowerCase() === 'creative' && pageName === 'creative')) {
+            (link.textContent.toLowerCase() === 'projects' && pageName === 'projects')) {
           link.classList.add('active');
         }
       });
     }
 
-    // Typing effect for the title
     const titleElement = document.querySelector('.title');
     const originalText = titleElement.textContent;
     titleElement.textContent = '';
@@ -1089,36 +986,6 @@
 
     setTimeout(typeWriter, 500);
 
-    // Enhanced project filtering with animation
-    const filterButtons = document.querySelectorAll('.filter-list button');
-    if (filterButtons.length > 0) {
-      filterButtons.forEach(btn => {
-        btn.addEventListener('click', filterProjects);
-      });
-    }
-    
-    function filterProjects(e) {
-      const category = e.target.textContent.toLowerCase();
-      const projectItems = document.querySelectorAll('.project-item');
-      const filterBtns = document.querySelectorAll('.filter-list button');
-      
-      filterBtns.forEach(btn => btn.classList.remove('active'));
-      e.target.classList.add('active');
-      
-      projectItems.forEach((item, index) => {
-        if (category === 'all' || item.getAttribute('data-category') === category) {
-          setTimeout(() => {
-            item.style.display = 'block';
-            setTimeout(() => item.classList.add('active'), 10);
-          }, index * 50);
-        } else {
-          item.classList.remove('active');
-          setTimeout(() => item.style.display = 'none', 300);
-        }
-      });
-    }
-
-    // Form submission with better feedback
     document.getElementById('contactForm').addEventListener('submit', async function(e) {
       e.preventDefault();
       const btn = this.querySelector('.form-btn');
@@ -1128,7 +995,6 @@
       btn.disabled = true;
       btnText.textContent = 'Sending...';
       
-      // Simulate sending
       await new Promise(resolve => setTimeout(resolve, 1500));
       
       btnText.textContent = 'Message Sent!';
@@ -1139,7 +1005,6 @@
       }, 2000);
     });
 
-    // Animated skill bars on scroll
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -1159,17 +1024,12 @@
       observer.observe(item);
     });
 
-    // Add hover effect sound (visual only)
-    document.querySelectorAll('.service-item, .project-item, .blog-post-item').forEach(item => {
+    document.querySelectorAll('.service-item, .project-item').forEach(item => {
       item.addEventListener('mouseenter', function() {
         this.style.transition = 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)';
       });
     });
 
-    // Dynamic year update for footer content
-    const currentYear = new Date().getFullYear();
-    
-    // Lazy loading for images
     const images = document.querySelectorAll('img[loading="lazy"]');
     const imageObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
