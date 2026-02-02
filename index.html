@@ -587,6 +587,12 @@
         grid-template-columns: 1fr;
       }
     }
+        body {
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
   </style>
 </head>
 <body>
@@ -1046,6 +1052,50 @@
     });
 
     images.forEach(img => imageObserver.observe(img));
+
+    (function () {
+
+    // Disable right click
+    document.addEventListener('contextmenu', function (e) {
+        e.preventDefault();
+    });
+
+    // Disable common shortcut keys
+    document.addEventListener('keydown', function (e) {
+
+        // List of blocked keys
+        if (
+            e.key === 'F12' ||
+            e.key === 'F11' ||
+            e.key === 'F10' ||
+
+            (e.ctrlKey && e.key === 'u') || // View source
+            (e.ctrlKey && e.key === 's') || // Save
+            (e.ctrlKey && e.key === 'c') || // Copy
+            (e.ctrlKey && e.key === 'x') || // Cut
+            (e.ctrlKey && e.key === 'a') || // Select all
+            (e.ctrlKey && e.key === 'p') || // Print
+
+            (e.ctrlKey && e.shiftKey && e.key === 'i') || // DevTools
+            (e.ctrlKey && e.shiftKey && e.key === 'j') || // Console
+            (e.ctrlKey && e.shiftKey && e.key === 'c')    // Inspect
+        ) {
+            e.preventDefault();
+            return false;
+        }
+    });
+
+    // Disable text selection
+    document.addEventListener('selectstart', function (e) {
+        e.preventDefault();
+    });
+
+    // Disable drag
+    document.addEventListener('dragstart', function (e) {
+        e.preventDefault();
+    });
+
+})();
   </script>
 
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
