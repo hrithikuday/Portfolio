@@ -3,10 +3,11 @@
 import { motion } from "framer-motion";
 import { 
   SiPython, SiDjango, SiFlask, SiNodedotjs, SiJavascript, 
-  SiTypescript, SiReact, SiNextdotjs, SiHtml5, SiCss, 
+  SiReact, SiNextdotjs, SiHtml5, SiCss, 
   SiTailwindcss, SiMongodb, SiPostgresql, SiGit, SiGithub, 
   SiSqlite, SiBootstrap, SiC, SiCplusplus 
 } from "react-icons/si";
+import { FaAws } from "react-icons/fa";
 
 interface SkillItem {
   name: string;
@@ -65,13 +66,13 @@ const skills: SkillItem[] = [
     icon: SiJavascript,
   },
   {
-    name: "TypeScript",
-    label: "LANGUAGE",
-    color: "from-blue-500/10 to-indigo-600/5",
-    iconColor: "text-blue-500",
-    borderColor: "hover:border-blue-400/40",
-    shadowColor: "shadow-blue-500/5",
-    icon: SiTypescript,
+    name: "AWS",
+    label: "PLATFORM",
+    color: "from-amber-500/10 to-orange-600/5",
+    iconColor: "text-amber-500",
+    borderColor: "hover:border-amber-400/40",
+    shadowColor: "shadow-amber-500/5",
+    icon: FaAws,
   },
   {
     name: "React",
