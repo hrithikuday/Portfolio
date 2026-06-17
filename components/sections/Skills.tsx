@@ -5,7 +5,7 @@ import {
   SiPython, SiDjango, SiFlask, SiNodedotjs, SiJavascript, 
   SiReact, SiNextdotjs, SiHtml5, SiCss, 
   SiTailwindcss, SiMongodb, SiPostgresql, SiGit, SiGithub, 
-  SiSqlite, SiBootstrap, SiC, SiCplusplus 
+  SiSqlite, SiBootstrap, SiC, SiCplusplus, SiDocker
 } from "react-icons/si";
 import { FaAws } from "react-icons/fa";
 import { TbApi } from "react-icons/tb";
@@ -173,6 +173,15 @@ const skills: SkillItem[] = [
     borderColor: "hover:border-neutral-400/40",
     shadowColor: "shadow-neutral-500/5",
     icon: SiGithub,
+  },
+  {
+    name: "Docker",
+    label: "CONTAINER",
+    color: "from-sky-500/10 to-blue-600/5",
+    iconColor: "text-sky-600",
+    borderColor: "hover:border-sky-400/40",
+    shadowColor: "shadow-sky-500/5",
+    icon: SiDocker,
   },
   {
     name: "Bootstrap",
