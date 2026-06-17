@@ -7,7 +7,7 @@ import Projects from "@/components/sections/Projects";
 import Stats from "@/components/sections/Stats";
 import Contact from "@/components/sections/Contact";
 import SocialMedia from "@/components/sections/SocialMedia";
-import Footer from "@/components/Footer";git init
+import Footer from "@/components/Footer";
 export default function Home() {
   return (
     <>
