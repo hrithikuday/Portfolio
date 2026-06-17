@@ -8,6 +8,7 @@ import {
   SiSqlite, SiBootstrap, SiC, SiCplusplus 
 } from "react-icons/si";
 import { FaAws } from "react-icons/fa";
+import { TbApi } from "react-icons/tb";
 
 interface SkillItem {
   name: string;
@@ -55,6 +56,15 @@ const skills: SkillItem[] = [
     borderColor: "hover:border-emerald-400/40",
     shadowColor: "shadow-emerald-500/5",
     icon: SiNodedotjs,
+  },
+  {
+    name: "REST API",
+    label: "INTERFACE",
+    color: "from-teal-500/10 to-emerald-600/5",
+    iconColor: "text-teal-600",
+    borderColor: "hover:border-teal-400/40",
+    shadowColor: "shadow-teal-500/5",
+    icon: TbApi,
   },
   {
     name: "JavaScript",
