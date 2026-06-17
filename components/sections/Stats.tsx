@@ -11,9 +11,9 @@ interface StatItem {
 
 const stats: StatItem[] = [
   { value: 15, suffix: "+", label: "Projects Completed" },
-  { value: 19, suffix: "", label: "Technologies Used" },
+  { value: 21, suffix: "", label: "Technologies Used" },
   { value: 40, suffix: "+", label: "GitHub Repositories" },
-  { value: 4, suffix: "+", label: "Years Learning" },
+  { value: 2, suffix: "+", label: "Years Learning" },
 ];
 
 function Counter({ value, suffix, duration = 1.5 }: { value: number; suffix: string; duration?: number }) {
@@ -28,13 +28,13 @@ function Counter({ value, suffix, duration = 1.5 }: { value: number; suffix: str
         if (!startTimestamp) startTimestamp = timestamp;
         const elapsed = timestamp - startTimestamp;
         const progress = Math.min(elapsed / (duration * 1000), 1);
-        
+
         // Easing out function
         const easeOutQuad = (t: number) => t * (2 - t);
         const currentCount = Math.floor(easeOutQuad(progress) * value);
-        
+
         setCount(currentCount);
-        
+
         if (progress < 1) {
           window.requestAnimationFrame(step);
         }
@@ -55,7 +55,7 @@ export default function Stats() {
   return (
     <section className="relative py-16 bg-white border-b border-border-custom overflow-hidden">
       <div className="max-w-6xl mx-auto px-6 relative z-10">
-        
+
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 text-center">
           {stats.map((stat, index) => (
             <motion.div
@@ -70,7 +70,7 @@ export default function Stats() {
               <div className="text-4xl sm:text-5xl font-black text-black tracking-tight mb-2">
                 <Counter value={stat.value} suffix={stat.suffix} />
               </div>
-              
+
               {/* Metric description label */}
               <div className="text-xs font-semibold text-secondary-text uppercase tracking-widest">
                 {stat.label}
