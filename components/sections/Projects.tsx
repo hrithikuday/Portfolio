@@ -28,8 +28,8 @@ const projects: ProjectItem[] = [
     gradient: "bg-linear-to-br from-purple-500/20 via-pink-500/10 to-transparent",
     glowColor: "hover:shadow-purple-500/10",
     icon: <Music className="text-purple-600" size={24} />,
-    demoUrl: "https://song4u.demo",
-    githubUrl: "https://github.com/officialhrithik/song4u",
+    demoUrl: "https://app.hrithikuday.me",
+    githubUrl: "https://github.com/officialhrithik/Song4u_Music_Player",
     featured: true,
   },
   {
@@ -142,9 +142,8 @@ export default function Projects() {
               variants={cardVariants}
               whileHover={{ y: -8, scale: 1.01 }}
               key={project.id}
-              className={`group relative overflow-hidden rounded-[32px] border border-border-custom bg-card-custom p-8 sm:p-10 transition-all duration-300 hover:border-black/20 hover:shadow-xl ${project.glowColor} ${
-                project.featured ? "md:col-span-2" : "md:col-span-1"
-              }`}
+              className={`group relative overflow-hidden rounded-[32px] border border-border-custom bg-card-custom p-8 sm:p-10 transition-all duration-300 hover:border-black/20 hover:shadow-xl ${project.glowColor} ${project.featured ? "md:col-span-2" : "md:col-span-1"
+                }`}
             >
               {/* Colored Gradient overlay background */}
               <div
