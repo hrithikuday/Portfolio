@@ -58,6 +58,19 @@ const projects: ProjectItem[] = [
     githubUrl: "https://github.com/officialhrithik/bill-system",
     featured: false,
   },
+  {
+    id: "Telegram Utility Bot",
+    name: "XeonModzz",
+    label: "TELEGRAM BOT",
+    description: "A Telegram utility bot that downloads media from Instagram, Facebook, Pinterest, and YouTube (songs/videos) using a Flask API with scraping tools like Instaloader and other extractors.",
+    tech: ["Python", "MongoDB", "Flask", "Telegram Bot API"],
+    gradient: "bg-linear-to-br from-orange-500/20 via-yellow-500/10 to-transparent",
+    glowColor: "hover:shadow-orange-500/10",
+    icon: <Receipt className="text-orange-600" size={24} />,
+    demoUrl: "https://t.me/XeonModzz_bot",
+    githubUrl: "https://github.com/hrithikuday/XeonModzz",
+    featured: false,
+  },
 ];
 
 const containerVariants = {
