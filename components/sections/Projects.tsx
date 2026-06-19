@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Music, DollarSign, Receipt, ExternalLink } from "lucide-react";
-import { FaGithub, FaTelegram } from "react-icons/fa6";
+import { FaGithub } from "react-icons/fa6";
 
 interface ProjectItem {
   id: string;
@@ -29,7 +29,7 @@ const projects: ProjectItem[] = [
     glowColor: "hover:shadow-purple-500/10",
     icon: <Music className="text-purple-600" size={24} />,
     demoUrl: "https://app.hrithikuday.me",
-    githubUrl: "https://github.com/officialhrithik/Song4u_Music_Player",
+    githubUrl: "https://github.com/hrithikuday/Song4u_Music_Playe",
     featured: true,
   },
   {
@@ -56,19 +56,6 @@ const projects: ProjectItem[] = [
     icon: <Receipt className="text-orange-600" size={24} />,
     demoUrl: "https://billsystem.demo",
     githubUrl: "https://github.com/officialhrithik/bill-system",
-    featured: false,
-  },
-  {
-    id: "Telegram Utility Bot",
-    name: "XeonModzz",
-    label: "TELEGRAM BOT",
-    description: "A Telegram utility bot that downloads media from Instagram, Facebook, Pinterest, and YouTube (songs/videos) using a Flask API with scraping tools like Instaloader and other extractors.",
-    tech: ["Python", "MongoDB", "Flask", "Telegram Bot API"],
-    gradient: "bg-linear-to-br from-sky-500/20 via-blue-500/10 to-transparent",
-    glowColor: "hover:shadow-sky-500/10",
-    icon: <FaTelegram className="text-sky-500" size={24} />,
-    demoUrl: "https://t.me/XeonModzz_bot",
-    githubUrl: "https://github.com/hrithikuday/XeonModzz",
     featured: false,
   },
 ];
