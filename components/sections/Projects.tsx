@@ -41,7 +41,7 @@ const projects: ProjectItem[] = [
     gradient: "bg-linear-to-br from-blue-500/20 via-cyan-500/10 to-transparent",
     glowColor: "hover:shadow-blue-500/10",
     icon: <DollarSign className="text-blue-600" size={24} />,
-    demoUrl: "https://myexpense.hrithikuday.onrender.com/",
+    demoUrl: "https://myexpense.hrithikuday.me",
     githubUrl: "https://github.com/hrithikuday/MyExpense",
     featured: false,
   },
