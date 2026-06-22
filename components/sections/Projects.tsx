@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Music, DollarSign, Receipt, ExternalLink } from "lucide-react";
+import { Music, DollarSign, Receipt, ExternalLink, ShoppingBag } from "lucide-react";
 import { FaGithub, FaTelegram } from "react-icons/fa6";
 
 interface ProjectItem {
@@ -69,6 +69,19 @@ const projects: ProjectItem[] = [
     icon: <FaTelegram className="text-sky-500" size={24} />,
     demoUrl: "https://t.me/XeonModz_bot",
     githubUrl: "https://github.com/hrithikuday/XeonModzz",
+    featured: false,
+  },
+  {
+    id: "xeon-ecommerce",
+    name: "Xeon E-Commerce",
+    label: "E-COMMERCE PLATFORM",
+    description: "A state-of-the-art E-Commerce platform built with Django and Django REST Framework (DRF). Features a premium glassmorphic UI, robust REST APIs, secure token authentication, and WhiteNoise static asset serving.",
+    tech: ["Django", "Django REST Framework", "PostgreSQL", "Vanilla CSS"],
+    gradient: "bg-linear-to-br from-emerald-500/20 via-teal-500/10 to-transparent",
+    glowColor: "hover:shadow-emerald-500/10",
+    icon: <ShoppingBag className="text-emerald-600" size={24} />,
+    demoUrl: "https://ecommerce.hrithikuday.me",
+    githubUrl: "https://github.com/hrithikuday/Ecommerce",
     featured: false,
   },
 ];
