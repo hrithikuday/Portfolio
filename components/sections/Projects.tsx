@@ -208,29 +208,6 @@ const projects: ProjectItem[] = [
   },
 ];
 
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.1,
-    },
-  },
-};
-
-const cardVariants = {
-  hidden: { opacity: 0, y: 30 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      type: "spring" as const,
-      stiffness: 70,
-      damping: 15,
-    },
-  },
-};
-
 export default function Projects() {
   const [activeFilter, setActiveFilter] = useState<"all" | "web" | "bots" | "utils">("all");
 
@@ -292,26 +269,20 @@ export default function Projects() {
           </div>
         </div>
 
-        {/* Grid Layout */}
-        <motion.div
-          layout
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
-          className="grid grid-cols-1 md:grid-cols-2 gap-8"
-        >
-          <AnimatePresence mode="popLayout">
+        {/* Grid Layout with smooth fade-in transitions */}
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={activeFilter}
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -15 }}
+            transition={{ duration: 0.25, ease: "easeInOut" }}
+            className="grid grid-cols-1 md:grid-cols-2 gap-8"
+          >
             {filteredProjects.map((project) => (
-              <motion.div
-                layout
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.9 }}
-                transition={{ duration: 0.3 }}
-                whileHover={{ y: -8, scale: 1.01 }}
+              <div
                 key={project.id}
-                className={`group relative overflow-hidden rounded-[32px] border border-border-custom bg-card-custom p-8 sm:p-10 transition-all duration-300 hover:border-black/20 hover:shadow-xl ${project.glowColor} ${project.featured ? "md:col-span-2" : "md:col-span-1"
+                className={`group relative overflow-hidden rounded-[32px] border border-border-custom bg-card-custom p-8 sm:p-10 transition-all duration-300 hover:-translate-y-2 hover:scale-[1.01] hover:border-black/20 hover:shadow-xl ${project.glowColor} ${project.featured ? "md:col-span-2" : "md:col-span-1"
                   }`}
               >
                 {/* Colored Gradient overlay background */}
@@ -388,10 +359,10 @@ export default function Projects() {
 
                 </div>
 
-              </motion.div>
+              </div>
             ))}
-          </AnimatePresence>
-        </motion.div>
+          </motion.div>
+        </AnimatePresence>
 
       </div>
     </section>
