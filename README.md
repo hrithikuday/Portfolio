@@ -32,23 +32,26 @@ Here is an overview of the key technologies powering both my portfolio and my br
 
 ## 🚀 Projects Showcased
 
-The portfolio showcases some of my favorite developments, including:
+The portfolio showcases my developer journey categorized into three core domains:
 
-1.  **🎵 Song4U**
-    *   *Description*: A premium music streaming and media platform featuring catalog discovery, personalized queues, and real-time audio playback control.
-    *   *Stack*: Next.js, Node.js, PostgreSQL
-2.  **🛍️ Xeon E-Commerce**
-    *   *Description*: A state-of-the-art e-commerce web app featuring a glassmorphic dashboard, token-based authentication, and REST endpoints.
-    *   *Stack*: Django, Django REST Framework, PostgreSQL, Vanilla CSS
-3.  **📊 Income Expense Tracker (MyExpense)**
-    *   *Description*: Real-time revenue and daily expense tracker complete with budget calculators and exportable financial summaries.
-    *   *Stack*: Python, Django Templates, Tailwind CSS, SQLite
-4.  **🧾 Customer Bill System**
-    *   *Description*: An enterprise billing management software helping business owners build invoices, track unpaid charges, and generate PDF invoices.
-    *   *Stack*: Next.js, PostgreSQL, Tailwind CSS
-5.  **🤖 XeonModzz (Telegram Utility Bot)**
-    *   *Description*: A media downloader bot utilizing scrapers and media extractors through a dedicated Flask API.
-    *   *Stack*: Python, MongoDB, Flask, Telegram Bot API
+### 🌐 Web Applications
+1.  **🎵 Song4U**: A premium music streaming and media platform featuring catalog discovery, personalized queues, and real-time audio playback control. (*Next.js, Node.js, PostgreSQL*)
+2.  **🛍️ Xeon E-Commerce**: A state-of-the-art e-commerce web app featuring a glassmorphic dashboard, token-based authentication, and REST endpoints. (*Django, Django REST Framework, PostgreSQL, Vanilla CSS*)
+3.  **📊 Income Expense Tracker (MyExpense)**: Real-time revenue and daily expense tracker complete with budget calculators and exportable financial summaries. (*Python, Django, Tailwind CSS, SQLite*)
+4.  **🧾 Customer Bill System**: An enterprise billing management software helping business owners build invoices, track unpaid charges, and generate PDF invoices. (*Next.js, PostgreSQL, Tailwind CSS*)
+5.  **💻 Developer Portfolio**: This personal portfolio website, featuring a premium glassmorphic UI design, custom keyframe floating animations, filtering tabs, responsive layouts, and robust React components. (*Next.js, TypeScript, Tailwind CSS, Framer Motion*)
+
+### 🤖 Telegram Bots
+6.  **⚡ TG-Stream**: A high-speed, lightweight Telegram bot and HTTP web server written in Go that enables users to stream or download files stored on Telegram directly via HTTP links. (*Go, Telegram Bot API, HTTP Stream Server*)
+7.  **🎬 5DB Movie Filter Bot**: A high-performance Telegram Auto Filter Bot featuring a unique 5-database architecture for up to 2.5 GB of free MongoDB storage, parallel duplicate checking, batch indexing, and IMDB integration. (*Python, Pyrogram, MongoDB, IMDB API*)
+8.  **🔄 AutoForward Bot V1**: Pyrogram-based Telegram bot to forward messages, save restricted content, filter specific file types, skip duplicates using MongoDB, customize captions, and insert custom inline buttons. (*Python, Pyrogram, MongoDB, Telegram Bot API*)
+9.  **🤖 XeonModzz**: A media downloader bot utilizing scrapers and media extractors through a dedicated Flask API. (*Python, MongoDB, Flask, Telegram Bot API*)
+
+### 🛠️ APIs & Utilities
+10. **📥 YTDLP Downloader**: A high-performance media downloader built on top of yt-dlp to download and convert video and audio from various platforms with quality selection and optimized caching. (*Python, yt-dlp, Telegram Bot API*)
+11. **🗂️ CardView Library**: A responsive, customizable card component library for React and TypeScript designed to display clean visual grids with glassmorphic aesthetics and modern hover animations. (*TypeScript, React, Vanilla CSS*)
+12. **🔧 BaseTG Bot Template**: A clean, production-ready base template for building Telegram bots in Python using Pyrogram, pre-configured with database utilities, logging handlers, and helper classes. (*Python, Pyrogram, MongoDB*)
+13. **⚙️ MyAPIs**: A centralized API service offering high-speed scraping, media fetching, and database utility endpoints for modern application integrations. (*Node.js, Express, REST API*)
 
 ---
 
